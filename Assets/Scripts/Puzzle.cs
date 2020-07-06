@@ -34,8 +34,17 @@ namespace Sudoku
 
         public bool IsSolved()
         {
-            //TODO
-            return false;
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    if (!_board[i][j].IsOpen)
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
         }
     }
 }
